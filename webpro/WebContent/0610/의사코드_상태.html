@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mycss.css">
+
+<style>
+	a:link{
+		color : red;
+		text-decoration : line-through; /* underline, overline, line-through*/ 
+	}
+	a:visited {
+		color : blue;
+	}
+	a:hover{
+		background : yellow;
+		font-size : 1.5em;
+		text-decoration : none;
+	}
+	a:active{
+		color : green;
+	}
+	p:hover{
+		background : lime;
+		font-size : 2.0em;  
+	}
+</style>
+</head>
+<body>
+<pre>
+	&lt;의사 클래스(pseudo-class, 가상클래스)&gt; 
+	클래스가 정의된 것처럼 간주
+ 	특별한 상태나 구조에 따라 선택
+ 	:으로 사용
+ 	상태 :  :link, :visited, :hover, :active
+ 	구조 : :nth-child(1), :nth-child(2), :nth-child(2n) 
+</pre>
+
+<pre>
+	a:link{
+		color : red;
+		text-decoration : line-through; /* underline, overline, line-through*/ 
+	}
+	a:visited {
+		color : blue;
+	}
+	a:hover{
+		background : yellow;
+		font-size : 1.5em;
+		text-decoration : none;
+	}
+	a:active{
+		color : green;
+	}
+</pre>
+	<a href="../아메리카노.html">아메리카노</a>
+	<a href="../카페라떼.html">카페라떼</a>
+	<a href="../카푸치노.html">카푸치노</a>
+	<a href="../에스프레소.html">에스프레소</a>
+	<hr>
+	<br>
+	<pre>
+	p:hover{
+		background : lime;
+		font-size : 2.0em;  
+	}
+	</pre>
+	<p>무궁화 꽃이 피었습니다</p>
+	<p>수국수국이 만발하였습니다</p>
+</body>
+</html>

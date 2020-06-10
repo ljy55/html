@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mycss.css">
+
+<style>
+	img{
+		width : 100px;
+		height : 100px;
+	}
+	#inputimg{
+		width : 50px;
+		height : 50px;
+	}
+</style>
+
+<script>
+	function aa(){
+		//window.alert("Hello~~");
+		
+		let userName = document.ff.name.value; //변수선언 때 let or val 쓰고 변수명 써주면 됨
+		let userId = document.ff.id.value;
+		let color = document.ff.color.value;
+		
+		//window.alert(color);
+		
+		//.body의 id이름을 이용한 접근
+		let by = document.getElementById('body');
+		//배경색을 바꾸기
+		by.style.backgroundColor = color; //#df12e2
+		
+		/*
+		document.write("이름 : " + userName + "<br>")
+		document.write("아이디 : " + userId + "<br>")	//이렇게 출력하면 xxxx
+		*/
+		
+		//window.alert("이름 : " + userName + "\n" + "아이디 : " + userId);
+	}
+</script>
+
+</head>
+<body id="body">
+<pre>
+	form input의 type
+	text, password, radio, checkbox, file, image, submit, reset, button
+	
+	전송을 실행하는 요소 : 
+	type='image'
+	type='submit'
+	
+	type='button' : 아무런 기능이 없다, 기능을 부여하기 위해서 함수를 정의하고 호출한다
+	함수정의 : function aa() { }
+	함수호출 : type='button' onclick='aa()'
+	
+	스크립트에서 html body태그안에 요소로 접근하기
+	1. name을 이용해서 접근
+	document.ff.name.value
+	document.ff.id.value
+</pre>
+	<form name="ff" action="input_type.jsp" method="post">
+		이름<input type="text" name="name"><br>
+		아이디 <input type="text" name="id"><br>
+		비밀번호 <input type="password" name="pass"><br>
+		주소 <input type="text" name="addr"><br>
+		전화번호 <input type="text" name="tel"><br>
+		성별 <input type="radio" name="gender" value="m">남자
+		   <input type="radio" name="gender" value="f">여자
+		   <br>
+		좋아하는 음식<input type="checkbox" name="food" value="치킨">치킨
+				 <input type="checkbox" name="food" value="고기">고기
+				 <input type="checkbox" name="food" value="짜장면">짜장면
+			     <input type="checkbox" name="food" value="파스타">파스타
+			     <input type="checkbox" name="food" value="냉면">냉면
+			     <br>
+		색상	<input type="color" name="color"><br>
+		파일 <input type="file" name="file"><br>
+			<input type="hidden" name="id2" value="a001">
+		이미지<img name="img" src="../images/카푸치노.jpg">
+			<br><br>
+		전송하기(전송을 실행 : type="image" type="submit")<br>
+			<input id="inputimg" type="image" src="../images/카푸치노.jpg"><br>
+			<input type="submit" value="전송"><br>
+			<input type="reset" value="취소"><br>
+			<input type="button" value="확인" onclick="aa()"><br>
+		
+	</form>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mycss.css">
+<style>
+	table{
+		border: 1px solid blue;
+		/*
+		border-width: 1px;
+		border-style: soild;
+		border-color: blue;
+		*/
+		/* border-spacing: 10px; */
+		border-collapse: collapse; 
+		/* border-collapse: separate; */	
+	}
+	td{
+		width: 200px;
+		height: 40px;
+		text-align: center;
+		padding : 5px;
+	}
+	#tb1 tr:nth-child(2n-1){ /* (2n-1) 대신에 (odd)줘도 됨 */
+		background: lightblue;
+	}
+	#tb1 tr:nth-child(2n){  /* (2n) 대신에 (even)줘도 됨 */
+		background: lightgray;
+	}
+	#tb2 td:nth-child(2n){
+		background: pink; 
+	}
+	#tb2 td:nth-child(2n-1){
+		background: yellow; 
+	}
+</style>
+</head>
+<body>
+<pre>
+	&lt;의사 클래스(pseudo-class, 가상클래스)&gt; 
+	클래스가 정의된 것처럼 간주
+	특별한 상태나 구조에 따라 선택
+	:으로 사용
+	상태 :  :link, :visited, :hover, :active
+	구조 : :nth-child(1), :nth-child(2), :nth-child(2n) 
+</pre>
+
+<pre>
+	#tb1 tr:nth-child(2n-1){
+		background: lightblue;
+	}
+	#tb1 tr:nth-child(2n){
+		background: lightgray;
+	}
+</pre>
+	<table id="tb1" border="1">
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+		
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+		
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+		
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+	</table>
+	
+<pre>
+	#tb2 td:nth-child(2n){  /* (2n) 대신에 (even)줘도 됨 */
+		background: pink; 
+	}
+	#tb2 td:nth-child(2n-1){  /* (2n-1) 대신에 (odd)줘도 됨 */
+		background: yellow; 
+	}
+</pre>
+	
+	<table id="tb2" border="1">
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+		
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+		
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+		
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+	</table>
+</body>
+</html>
